@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --cc-red: hsl(0, 78%, 62%);
+    --cc-cyan: hsl(180, 62%, 55%);
+    --cc-orange: hsl(34, 97%, 64%);
+    --cc-blue: hsl(212, 86%, 64%);
+    --cc-very-dark-blue: hsl(234, 12%, 34%);
+    --cc-grayish-blue: hsl(229, 6%, 66%);
+    --cc-very-light-gray: hsl(0, 0%, 98%);
+    --ff-poppins: 'Poppins', sans-serif;
+}
+
+
+/* reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-poppins);
+}
+
+body {
+    min-height: 100vh;
+    font-size: .95rem;
+    background: var(--cc-very-light-gray);
+    color: var(--cc-grayish-blue);
+}
+
+h1,
+#intro h2 {
+    color: var(--cc-very-dark-blue);
+}
+
+main {
+    min-height: 100vh;
+    padding: 85px 30px;
+}
+
+/* font weight classes */
+.fw-xlight {
+    font-weight: 200;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+/* flex classes */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* style intro section */
+#intro {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+    width: 100%;
+    width: clamp(315px, 100%, 550px);
+    align-self: center;
+    justify-self: center;
+}
+
+#intro h1 {
+    color: var(--cc-grayish-blue);
+}
+
+/* style cards */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, .25);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+    width: clamp(315px, 100%, 350px)
+}
+
+.col {
+    align-items: center;
+}
+
+/* colored bars on top of cards */
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border: 2px solid var(--cc-cyan);
+    top: 0;
+    left: 0;
+}
+
+
+#teamBuilder::before {
+    border: 2px solid var(--cc-red);
+}
+
+#karma::before {
+    border: 2px solid var(--cc-orange);
+}
+
+#calculator::before {
+    border: 2px solid var(--cc-blue);
+}
+
+/* card icon styles */
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 35px;
+}
+
+@media screen and (min-width: 768px){
+    #intro header {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    
+    #cards {
+        display: flex;
+    }
+
+    .col {
+        width: calc(100% / 3);
+        justify-content: center;
+    }
+
+    #teamBuilder,
+    #karma {
+        align-self: center;
+    }
+
+    #supervisor {
+        align-self: end;
+    }
+
+    #calculator {
+        align-self: start;
+    }
+}
