@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github]https://github.com/NParker33/Frontend-Mentor-four-card-feature-section)
+- Solution URL: [Github](https://github.com/NParker33/Frontend-Mentor-four-card-feature-section)
 - Live Site URL: [Frontend Mentor Challenge | Four Card Feature Section](https://nparker33.github.io/Frontend-Mentor-four-card-feature-section/)
 
 ## My process
